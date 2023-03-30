@@ -9,12 +9,12 @@
 
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
-    "^@domain/(.*)$",
-    "^@data/(.*)$",
-    "^@infra/(.*)$",
-    "^@presentation/(.*)$",
-    "^@validation/(.*)$",
-    "^@main/(.*)$",
+    "^@(.*)/domain/(.*)$",
+    "^@(.*)/data/(.*)$",
+    "^@(.*)/infra/(.*)$",
+    "^@(.*)/presentation/(.*)$",
+    "^@(.*)/validation/(.*)$",
+    "^@(.*)/main/(.*)$",
     "^[./]"
   ],
   "importOrderSeparation": true,

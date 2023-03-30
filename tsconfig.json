@@ -1,25 +1,20 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@models/*": ["src/models/*"],
-      "@models": ["src/models"],
-
-      "@data/*": ["src/data/*"],
-      "@data": ["src/data"],
-
-      "@infra/*": ["src/infra/*"],
-      "@infra": ["src/infra"],
-
-      "@presentation/*": ["src/presentation/*"],
-      "@presentation": ["src/presentation"],
-
-      "@validation/*": ["src/validation/*"],
-      "@validation": ["src/validation"],
-
-      "@main/*": ["src/main/*"],
-      "@main": ["src/main"]
+      // "@models/*": ["src/models/*"],
+      // "@models": ["src/models"],
+      // "@data/*": ["src/data/*"],
+      // "@data": ["src/data"],
+      // "@infra/*": ["src/infra/*"],
+      // "@infra": ["src/infra"],
+      // "@presentation/*": ["src/presentation/*"],
+      // "@presentation": ["src/presentation"],
+      // "@validation/*": ["src/validation/*"],
+      // "@validation": ["src/validation"],
+      // "@main/*": ["src/main/*"],
+      // "@main": ["src/main"]
     }
   }
 }
