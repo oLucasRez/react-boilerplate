@@ -1,5 +1,25 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@models/*": ["src/models/*"],
+      "@models": ["src/models"],
+
+      "@data/*": ["src/data/*"],
+      "@data": ["src/data"],
+
+      "@infra/*": ["src/infra/*"],
+      "@infra": ["src/infra"],
+
+      "@presentation/*": ["src/presentation/*"],
+      "@presentation": ["src/presentation"],
+
+      "@validation/*": ["src/validation/*"],
+      "@validation": ["src/validation"],
+
+      "@main/*": ["src/main/*"],
+      "@main": ["src/main"]
+    }
   }
 }

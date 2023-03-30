@@ -20,8 +20,11 @@
     "camelcase": "error",
     "spaced-comment": "error",
     "quotes": ["error", "single"],
-    "no-duplicate-imports": "error"
+    "no-duplicate-imports": "error",
+    "no-empty-pattern": "warn",
+    "@typescript-eslint/no-empty-interface": "warn"
   },
+  "ignorePatterns": ["webpack.config.js"],
   "settings": {
     "import/resolver": {
       "typescript": {}
