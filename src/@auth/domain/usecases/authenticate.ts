@@ -1,12 +1,15 @@
-import { Account } from '@auth/domain/models';
+import { AccountModel } from '@auth/domain/models';
 
-export type Params = {
+import { Usecase } from '@common/utils/types';
+
+export type AuthenticateParams = {
   email: string;
   password: string;
 };
 
-export type Model = Account.Model;
+export type AuthenticateModel = AccountModel;
 
-export interface Usecase {
-  exe(params: Params): Promise<Model>;
-}
+export type AuthenticateUsecase = Usecase<
+  AuthenticateParams,
+  AuthenticateModel
+>;

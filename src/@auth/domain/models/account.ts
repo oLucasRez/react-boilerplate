@@ -1,4 +1,4 @@
-export interface Model {
+export interface AccountModel {
   accessToken: string;
   name: string;
 }

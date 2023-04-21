@@ -1,1 +1,1 @@
-export * as HTTP from './http';
+export { HTTPRequest, HTTPResponse, HTTPService, HTTPStatusCode } from './http';

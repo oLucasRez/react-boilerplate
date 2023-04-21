@@ -1,1 +1,5 @@
-export * as Authenticate from './authenticate';
+export {
+  AuthenticateParams,
+  AuthenticateModel,
+  AuthenticateUsecase,
+} from './authenticate';

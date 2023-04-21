@@ -1,1 +1,1 @@
-export * as RemoteAuthenticate from './remote-authenticate';
+export { RemoteAuthenticate } from './remote-authenticate';

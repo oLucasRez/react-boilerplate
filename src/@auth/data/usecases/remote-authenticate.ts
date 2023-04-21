@@ -1,33 +1,30 @@
-import { Authenticate } from '@auth/domain/usecases';
+import { AuthenticateModel, AuthenticateUsecase } from '@auth/domain/usecases';
 import {
   InvalidCredentialsError,
   UnexpectedError,
 } from '@common/domain/errors';
 
-import { HTTP } from '@common/data/protocols';
+import { HTTPService, HTTPStatusCode } from '@common/data/protocols';
 
-export type Model = Authenticate.Model;
-
-export class Usecase implements Authenticate.Usecase {
+export class RemoteAuthenticate {
   constructor(
     private readonly url: string,
-    private readonly httpClient: HTTP.Client<Model>,
+    private readonly httpService: HTTPService,
   ) {}
 
-  async exe(params: Authenticate.Params): Promise<Authenticate.Model> {
-    const httpResponse = await this.httpClient.request({
-      url: this.url,
-      method: 'post',
-      body: params,
-    });
+  usecase: AuthenticateUsecase = async (params) => {
+    const httpResponse = await this.httpService.post<AuthenticateModel>(
+      this.url,
+      params,
+    );
 
     switch (httpResponse.statusCode) {
-      case HTTP.StatusCode.ok:
+      case HTTPStatusCode.ok:
         return httpResponse.body;
-      case HTTP.StatusCode.unauthorized:
+      case HTTPStatusCode.unauthorized:
         throw new InvalidCredentialsError();
       default:
         throw new UnexpectedError();
     }
-  }
+  };
 }
